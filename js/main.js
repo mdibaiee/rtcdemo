@@ -39,7 +39,9 @@ $(function() {
       });
 
       peer.on('call', function(c) {
+        console.log('Got Called - peer:call');
         c.on('stream', function(str) {
+          console.log('Got stream - peer.c:stream');
           window.stream = str;
           if(!str.getVideoTracks().length) {
             $('.remote p').removeClass('hidden');
@@ -48,6 +50,16 @@ $(function() {
           $('.remote video')[0].play();
         });
       });
+
+      call.on('stream', function(str) {
+        console.log('Got stream - call:stream');
+        window.stream = str;
+        if(!str.getVideoTracks().length) {
+          $('.remote p').removeClass('hidden');
+        }
+        $('.remote video').prop('src', window.URL.createObjectURL(str));
+        $('.remote video')[0].play();
+      })
 
       con.on('open', function() {
         $('.connecting').addClass('hidden');
