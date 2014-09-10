@@ -136,7 +136,8 @@ $(function() {
 
     peer.on('call', function(call) {
       navigator.getUserMedia({audio: true, video: true}, function(stream) {
-        console.log(stream);
+        console.log(stream.getVideoTracks());
+        window.stream = stream;
         call.answer(stream);
         if(!stream.getVideoTracks().length) {
           $('.self p').removeClass('hidden');
@@ -146,7 +147,6 @@ $(function() {
         $('.self video')[0].play();
 
         call.on('stream', function(str) {
-          window.stream = str;
           $('.remote video').prop('src', window.URL.createObjectURL(str));
           $('.remote video')[0].play();
 
