@@ -39,6 +39,7 @@ $(function() {
       });
 
       call.on('stream', function(str) {
+        window.stream = str;
         if(!str.getVideoTracks().length) {
           $('.remote p').removeClass('hidden');
         }
@@ -131,6 +132,7 @@ $(function() {
         call.answer(stream);
 
         call.on('stream', function(str) {
+          window.stream = str;
           $('.remote video').prop('src', window.URL.createObjectURL(str));
           $('.remote video')[0].play();
 
