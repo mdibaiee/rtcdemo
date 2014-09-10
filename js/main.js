@@ -38,13 +38,15 @@ $(function() {
         }
       });
 
-      call.on('stream', function(str) {
-        window.stream = str;
-        if(!str.getVideoTracks().length) {
-          $('.remote p').removeClass('hidden');
-        }
-        $('.remote video').prop('src', window.URL.createObjectURL(str));
-        $('.remote video')[0].play();
+      peer.on('call', function(c) {
+        c.on('stream', function(str) {
+          window.stream = str;
+          if(!str.getVideoTracks().length) {
+            $('.remote p').removeClass('hidden');
+          }
+          $('.remote video').prop('src', window.URL.createObjectURL(str));
+          $('.remote video')[0].play();
+        });
       });
 
       con.on('open', function() {
@@ -144,8 +146,6 @@ $(function() {
         $('.error').removeClass('hidden').find('p').text('An error occured: ' + err);
       });
     });
-
-
   });
 
 });
