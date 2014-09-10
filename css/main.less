@@ -1,0 +1,161 @@
+@import 'normalize';
+
+body, html {
+  margin: 0;
+  font-size: 10px;
+  direction: ltr;
+  width: 100%;
+  height: 100%;
+}
+body {
+  font-size: 1.6rem;
+  background: #eaeaea;
+  color: #343434;
+}
+* {
+  box-sizing: border-box;
+}
+*:focus {
+  outline: none;
+}
+*::-moz-focus-inner {
+  border: none;
+}
+
+.hidden {
+  display: none;
+}
+
+header {
+  width: 100%;
+  height: 10rem;
+  padding: 2rem 4rem;
+  border-bottom: 1px solid #b6b6b6;
+  box-shadow: 0 1px 5px #9a9a9a;
+}
+
+.modal {
+  background: inherit;
+  border: 1px solid #8b8b8b;
+  box-shadow: 0 0 3px #9a9a9a;
+  padding: 2rem;
+  border-radius: 5px;
+  width: 30rem;
+  height: auto;
+  min-height: 23rem;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  margin-left: -15rem;
+  margin-top: -12.2rem;
+}
+
+.close {
+  position: absolute;
+  left: -1rem;
+  top: -1rem;
+  border-radius: 50%;
+  background: #3a3a3a;
+  color: white;
+  text-align: center;
+  padding: 0.1rem 0.6rem;
+  font-family: sans-serif;
+  cursor: pointer;
+}
+
+label {
+  color: #575757;
+  font-weight: bold;
+  font-size: 3rem;
+}
+
+input {
+  border: none;
+  border-bottom: 1px solid #3a3a3a;
+  background: none;
+  width: 90%;
+  margin: 3rem auto;
+  text-align: center;
+  display: block;
+  padding: 1rem 1rem;
+  overflow: visible;
+}
+
+button {
+  width: 90%;
+  background: #354ce3;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  height: 4rem;
+  margin: 1rem auto;
+  display: block;
+}
+
+button:hover {
+  background: #4b63ef;
+}
+
+button:disabled {
+  background: #808080;
+}
+
+header a, header p {
+  float: right;
+  margin: 1.5rem 3rem;
+}
+
+header p {
+  margin-right: 5rem;
+}
+
+.chat {
+  width: 80%;
+  position: fixed;
+  bottom: -0.2rem;
+  left: 10%;
+  height: 15rem;
+  border: 1px solid #8b8b8b;
+  box-shadow: 0 0 3px #9a9a9a;
+  padding: 1rem 4rem;
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.modal p {
+  text-align: center;
+}
+
+.chat div {
+  height: 10rem;
+  overflow-y: scroll;
+}
+
+.chat input {
+  margin: -1rem auto 0;
+}
+
+a {
+  color: inherit;
+}
+
+h1 {
+  font-size: 4rem;
+  font-weight: normal;
+  margin: 0;
+  float: left;
+}
+
+.self {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 20rem;
+  height: 20rem;
+}
+
+.remote {
+  width: 70%;
+  height: auto;
+  margin: 3rem auto;
+}

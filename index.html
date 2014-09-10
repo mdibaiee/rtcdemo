@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>Boilerplate</title>
+    <meta charset='UTF-8'>
+    <link rel='stylesheet/less' href='css/main.less'>
+  </head>
+
+  <body>
+
+    <header>
+      <h1>Yo!</h1>
+
+      <a href='#call'>Call</a>
+      <a href='#reconnect' class='hidden'>Reconnect</a>
+      <a href='#exit' class='hidden'>Exit Chat</a>
+
+      <p id='id'>Your ID is: </p>
+    </header>
+
+    <div class='self'>
+      <p class='hidden'>You don't have a video device or you didn't allow access for it.</p>
+      <video></video>
+      <audio></audio>
+    </div>
+
+    <div class='remote'>
+      <p class='hidden'>Remote Peer doesn't have a video device or he/she didn't allow access for it.</p>
+      <video></video>
+      <audio></audio>
+    </div>
+
+    <div class='chat hidden'>
+      <div>
+      </div>
+      <input id='chat' placeholder='Type your message here'>
+    </div>
+
+    <div class='modal call hidden'>
+      <form id='call'>
+        <label for='id'>Target's ID</label>
+        <input id='id' placeholder='s23h4gzxi0'>
+        <button>Call</button>
+      </form>
+      <a class='close'>x</a>
+    </div>
+
+    <div class='modal error hidden'>
+      <p></p>
+      <a class='close'>x</a>
+    </div>
+
+    <div class='modal connecting hidden'>
+      Connecting to the peer.. Please wait
+    </div>
+
+    <div class='modal connected hidden'>
+      <span></span> is requesting to have a call with you.
+
+      <button id='accept'>Accept</button>
+      <button id='Decline'>Decline</button>
+    </div>
+
+    <div class='modal declined hidden'>
+      Target peer declined your call
+      <a class='close'>x</a>
+    </div>
+
+    <div class='modal accepted hidden'>
+      Target peer accepted your call
+      <a class='close'>x</a>
+    </div>
+
+    <div class='modal wait'>
+      <form id='name'>
+        <label for='name'>Your Name</label>
+        <input id='name' placeholder='Mahdi'>
+        <button>OK</button>
+      </form>
+      <p class='hidden'>Connecting to Peer Server...</p>
+    </div>
+
+    <script src='less.js'></script>
+    <script src='js/libs/zepto.js'></script>
+    <script src='js/libs/peer.js'></script>
+    <script src='js/main.js'></script>
+  </body>
+
+</html>
