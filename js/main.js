@@ -59,7 +59,7 @@ $(function() {
         }
         $('.remote video').prop('src', window.URL.createObjectURL(str));
         $('.remote video')[0].play();
-      })
+      });
 
       con.on('open', function() {
         $('.connecting').addClass('hidden');
@@ -136,14 +136,13 @@ $(function() {
 
     peer.on('call', function(call) {
       navigator.getUserMedia({audio: true, video: true}, function(stream) {
-
+        call.answer(stream);
         if(!stream.getVideoTracks().length) {
           $('.self p').removeClass('hidden');
         }
 
         $('.self video').prop('src', window.URL.createObjectURL(stream));
         $('.self video')[0].play();
-        call.answer(stream);
 
         call.on('stream', function(str) {
           window.stream = str;
