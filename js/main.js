@@ -136,6 +136,7 @@ $(function() {
 
     peer.on('call', function(call) {
       navigator.getUserMedia({audio: true, video: true}, function(stream) {
+        console.log(stream);
         call.answer(stream);
         if(!stream.getVideoTracks().length) {
           $('.self p').removeClass('hidden');
