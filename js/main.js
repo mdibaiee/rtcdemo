@@ -98,7 +98,8 @@ $(function() {
         iceServers: [
           { url: 'turn:live@bugpedia.ir:8086', credential: '1234'} 
         ]
-      }
+      },
+      debug: 3
     });
 
     // PeerJS
