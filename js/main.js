@@ -97,7 +97,7 @@ $(function() {
       config: {
         iceServers: [
           { url: 'stun:stun.l.google.com:19302'},
-          { url: 'numb.viagenie.ca:3478', credential: 'testtheshit', username: 'mdibaiee@aol.com'} 
+          { url: 'turn:numb.viagenie.ca:3478', credential: 'testtheshit', username: 'mdibaiee@aol.com'} 
         ]
       },
       debug: 3
