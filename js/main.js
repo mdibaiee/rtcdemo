@@ -92,7 +92,14 @@ $(function() {
     var name = $(this).find('input').val();
     $('.modal.wait button').prop('disabled', true);
     $('.modal.wait p').removeClass('hidden');
-    peer = new Peer({key: 'mj5sqj5jz53zncdi'});
+    peer = new Peer({
+      key: 'mj5sqj5jz53zncdi', 
+      config: {
+        iceServers: [
+          { url: 'turn:live@bugpedia.ir:8086', credential: '1234'} 
+        ]
+      }
+    });
 
     // PeerJS
 
