@@ -97,7 +97,7 @@ $(function() {
       config: {
         iceServers: [
           { url: 'stun:stun.l.google.com:19302'},
-          { url: 'turn:bugpedia.ir:8086', credential: '1234', username: 'live'} 
+          { url: 'numb.viagenie.ca', credential: 'testtheshit', username: 'mdibaiee@aol.com'} 
         ]
       },
       debug: 3
