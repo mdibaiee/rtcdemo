@@ -96,7 +96,7 @@ $(function() {
       key: 'mj5sqj5jz53zncdi', 
       config: {
         iceServers: [
-          { url: 'stun:stun.l.google.com:19302'}
+          { url: 'stun:stun.l.google.com:19302'},
           { url: 'turn:live@bugpedia.ir:8086', credential: '1234'} 
         ]
       },
